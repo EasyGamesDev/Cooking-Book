@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Rubik+Mono+One&family=Arimo:wght@500&display=swap');
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg); } }
+  .circle-pulse .loader > div {
+    margin: 23px 0 0 23px;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    animation: circlePulse 1s ease infinite; }
+
+@keyframes circlePulse {
+  0% {
+    transform: scale(0.1); }
+  80% {
+    opacity: .8; }
+  100% {
+    transform: scale(1);
+    opacity: 0; } }
+  .circle-pulse-multiple .loader .circle-2 {
+    animation-delay: -.9s; }
+  .circle-pulse-multiple .loader .circle-3 {
+    animation-delay: -.8s; }
+.arc-rotate-double .loader {
+  width: 100%;
+  height: 100%; }
+  .arc-rotate-double .loader > div {
+    position: absolute;
+    border: 2px solid;
+    border-color: transparent #FFF;
+    border-radius: 50%;
+    animation: load 1s infinite ease-in-out; }
+  .arc-rotate-double .loader .arc-1 {
+    position: absolute;
+    top: 31%;
+    left: 25%;
+    width: 170px;
+    height: 170px; }
+  .arc-rotate-double .loader .arc-2 {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    width: 100px;
+    height: 100px;
+    animation-direction: reverse;
+    animation-delay: -0.5s; }
+
+@keyframes load {
+  0% {
+    transform: rotate(0) scale(1); }
+  50% {
+    transform: rotate(180deg) scale(0.6); }
+  100% {
+    transform: rotate(360deg) scale(1); } }
+.loader {
+	background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+}
+body {
+	background: #fff
+	font-family: 'Lato', sans-serif;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	text-align: center;
+}
+.justButton {
+	background-color: rgb(40, 63, 211);
+	border-radius: 16px;
+	color: #fff;
+	font-size: 16px;
+	padding: 4px 16px;
+	text-align: center;
+	font-family: 'Comfortaa', cursive;
+	transition: all 0.5s ease-out;
+	text-decoration: none;
+	text-align: center;
+}
+.justButton:hover {
+    background-color: #FF033E;
+    color: #000;
+}
+h1 {
+font-family: 'Rubik Mono One', sans-serif;
+text-align: center;
+font-size: 24px;
+} 
+h3 {
+	font-family: "Comfortaa", cursive;
+} 
+.rounded {
+width: 95%;
+margin-left: 5%;
+counter-reset: li; 
+list-style: none; 
+font: 14px "Trebuchet MS", "Lucida Sans";
+padding: 0;
+text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+.rounded a {
+position: relative;
+display: block;
+padding: .4em .4em .4em 2em;
+margin: .5em 0;
+background: #DAD2CA;
+color: #444;
+text-decoration: none;
+border-radius: .3em;
+transition: .3s ease-out;
+}
+.rounded a:hover {background: #E9E4E0;}
+.rounded a:hover:before {transform: rotate(360deg);}
+.rounded a:before {
+content: counter(li);
+counter-increment: li;
+position: absolute;
+left: -1.3em;
+top: 50%;
+margin-top: -1.3em;
+background: #8FD4C1;
+height: 2em;
+width: 2em;
+line-height: 2em;
+border: .3em solid white;
+text-align: center;
+font-weight: bold;
+border-radius: 2em;
+transition: all .3s ease-out;
+}
+#contentBlocker {
+	background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+}
+.addRecipeDiv {
+	background-color: #ccc;
+    bottom: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 20%;
+    left: 10%; 
+    z-index: 100000;
+    height: 400px;
+    width: 300px;
+    border-radius: 8px;
+} 
+.addDeleteDiv {
+	background-color: #333;
+	color: #fff;
+    bottom: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 20%;
+    left: 10%; 
+    z-index: 100000;
+    height: 300px;
+    width: 300px;
+    border-radius: 8px;
+} 
+input[type=text] {
+	width: 250px;
+	height: 20px;
+	border-radius: 32px;
+	color: #fff;
+	background-color: rgba(137, 137, 137, 0.6);
+	padding: 8px;
+	border: none;
+	outline: none;
+	font-family: 'Comfortaa', cursive;
+	font-size: 13px;
+}  
+
+
+textarea {
+	width: 90%;
+	border-radius: 32px;
+	color: #666;
+	background-color: #F8F8F8;
+	padding: 4px 16px;
+	border: none;
+	outline: none;
+	font-family: 'Comfortaa', cursive;
+	font-size: 13px;
+} 
+textarea::selection {
+  background: rgba(0,0,0,0.4);
+  color: #FDCA12;
+} 
+
+.subFood {
+    background-color: #bfafa3;
+    border-radius: 8px;
+} 
+.subFood h3 {
+	background-color: #a6978b;
+	border-radius: 8px;
+}
+
+

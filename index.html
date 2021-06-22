@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8 lang=ru>
+<meta name=viewport content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=with-device-width">
+<link rel=stylesheet href=recipeBook.css>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+<title>Книга рецептов</title>
+</head>
+<body>
+<div id=content>
+<h1>Книга рецептов</h1>
+<a class=justButton onclick=showRecipeW()>Добавить</a>
+<a class=justButton onclick=showDeleteW()>Удалить всё</a>
+<ul class=rounded id=showRecipes>
+	<li onclick="toggleThis(isOpen, '.subFood'); isOpen = !isOpen;" ><a>Тест<div class=subFood>
+    <h3>Ингредиенты</h3>
+    <div id=ingridDiv><h2>Сыр, макароны</h4></div>
+    <h3>Рецепт</h3>
+    <div id=recipeDiv><h2>Перемешать</h2></div>
+    </div></a>
+    
+    </li>
+	<li><a>Тест</a></li>
+	<li><a>Тест</a></li>
+</ul>
+<a onclick=window.location.reload()>Обновить</a>
+
+
+<div class=addDeleteDiv>
+<h3>Вы действительно хотите удалить все свои рецепты?</h3>
+<a class=justButton style="background-color: green; font-size: 35px" onclick=hideDeleteW()>Отмена</a><br><br><br><br><br><br>
+<a class=justButton style="background-color: red; font-size: 14px" onclick=deleteAll();hideDeleteW()>Подтверждаю</a>
+</div>
+<div class=addRecipeDiv>
+<h1>Добавьте рецепт</h1>
+<h3>Название блюда:<input type=text id=nameDish autocomplete=off></h3>
+<h3>Ингридиенты:<input type=text id=ingrID autocomplete=off></h3>
+<h3>Рецепт:<textarea id=recipeInp></textarea></h3>
+<a class=justButton onclick=hideRecipeW();addRecipe()>Добавить</a>
+<a class=justButton onclick=hideRecipeW()>Отмена</a>
+</div>
+
+
+</div>
+<div id=contentBlocker></div>
+<div class="loader-container arc-rotate-double">
+			<div class="loader">
+				<div class="arc-1"></div>
+				<div class="arc-2"></div>
+			</div>
+</div> 
+<script src=recipeBook.js></script>
+</body>
+</html>
